@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bookstore.js',
-    path: path.join(__dirname, './src')
+    path: path.join(__dirname, './dist')
   },
   module: {
     loaders: [
