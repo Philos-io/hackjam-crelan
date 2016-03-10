@@ -1,3 +1,4 @@
 node_modules/
 src/bookstore.js
 src/bookstore.js.map
+dist/
