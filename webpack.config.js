@@ -1,12 +1,19 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
-  entry: './src/index.js',
+  entry: {
+    app: './src/index.js',
+    vendor: ['angular', 'angular-route']
+  },
   output: {
-    filename: 'bookstore.js',
+    filename: '[name].js',
     path: path.join(__dirname, './dist')
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin("vendor","vendor.bundle.js")
+  ],
   module: {
     loaders: [
       {
